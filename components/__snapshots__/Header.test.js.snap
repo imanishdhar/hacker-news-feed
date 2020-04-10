@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Test Suite Header component should render 1`] = `
+Object {
+  "wrapper": ShallowWrapper {},
+}
+`;
