@@ -14,7 +14,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "pre-push": "npm run test:coverage"
     }
   },
   "lint-staged": {
@@ -52,5 +53,25 @@
     "jest": "^25.3.0",
     "lint-staged": "^10.1.3",
     "prettier": "^2.0.4"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "components/*.{js,jsx}",
+      "pages/**/*.{js,jsx}"
+    ],
+    "coverageThreshold": {
+      "components/*.{js,jsx}": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": 80
+      },
+      "pages/**/*.{js,jsx}": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": 80
+      }
+    }
   }
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow, render } from 'enzyme';
 
 import News from './[pageid]';
+import Footer from '../../components/Footer';
 
 describe('News Test Suite', () => {
   let compWrapper;

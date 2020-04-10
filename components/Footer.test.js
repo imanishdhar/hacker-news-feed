@@ -19,4 +19,9 @@ describe('Footer Test Suite', () => {
     const wrapper = setup();
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('Footer component should have back button when page is more than 1', () => {
+    const wrapper = shallow(<Footer page={2}></Footer>);
+    expect(wrapper.find('a').exists()).toBe(true);
+  });
 });
