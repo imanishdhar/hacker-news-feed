@@ -2,6 +2,7 @@
 // https://jestjs.io/docs/en/configuration.html
 
 module.exports = {
+  rootDir: './',
   // Automatically clear mock calls and instances between every test
   clearMocks: true,
 
@@ -15,7 +16,7 @@ module.exports = {
   moduleFileExtensions: ['js', 'json', 'jsx'],
 
   // The paths to modules that run some code to configure or set up the testing environment before each test
-  setupFiles: ['/Users/mandwive/TGA/hacker-news/enzyme.config.js'],
+  setupFiles: ['<rootDir>/enzyme.config.js'],
 
   // The test environment that will be used for testing
   testEnvironment: 'jsdom',
@@ -30,7 +31,7 @@ module.exports = {
   testURL: 'http://localhost',
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
-  transformIgnorePatterns: ['/Users/mandwive/TGA/hacker-news/node_modules/'],
+  transformIgnorePatterns: ['<rootDir>/node_modules/'],
 
   transform: {
     '^.+\\.(js|jsx)$': 'babel-jest',
