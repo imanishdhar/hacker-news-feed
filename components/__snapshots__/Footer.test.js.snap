@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer Test Suite Footer component should render 1`] = `
+Object {
+  "props": Object {
+    "page": 1,
+  },
+  "wrapper": ShallowWrapper {},
+}
+`;

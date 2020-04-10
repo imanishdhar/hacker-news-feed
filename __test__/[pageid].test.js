@@ -1,8 +1,7 @@
 import React from 'react';
 import { shallow, render } from 'enzyme';
 
-import News from './[pageid]';
-import Footer from '../../components/Footer';
+import News from '../pages/news/[pageid]';
 
 describe('News Test Suite', () => {
   let compWrapper;
