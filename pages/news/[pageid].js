@@ -1,19 +1,17 @@
-import { Component } from "react";
-import Router from "next/router";
-import Link from "next/link";
-import fetch from "isomorphic-unfetch";
+import { Component } from 'react';
+import fetch from 'isomorphic-unfetch';
 
 import {
   isStorageAvaiable,
   setLocalStorageItem,
   getLocalStorageItem,
-} from "../../utils/browserStorage";
+} from '../../utils/browserStorage';
 
-import { getStartIndex } from "../../utils/commonUtil";
+import { getStartIndex } from '../../utils/commonUtil';
 
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
-import List from "../../components/List";
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import List from '../../components/List';
 
 class News extends Component {
   constructor(props) {
@@ -28,7 +26,7 @@ class News extends Component {
   }
   static async getInitialProps({ query: { pageid = 1 } }) {
     if (
-      typeof window !== "undefined" &&
+      typeof window !== 'undefined' &&
       isStorageAvaiable() &&
       getLocalStorageItem(pageid) !== null
     ) {
@@ -42,7 +40,7 @@ class News extends Component {
     }
 
     const apiBaseURI = process.env.APP_BASE_URI;
-    const queryParam = pageid === "1" ? "?tags=front_page" : `?page=${pageid}`;
+    const queryParam = pageid === '1' ? '?tags=front_page' : `?page=${pageid}`;
     const response = await fetch(`${apiBaseURI}${queryParam}`);
     const data = await response.json();
     const pageNum = parseInt(pageid, 10);
