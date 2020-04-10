@@ -3,29 +3,29 @@ node_js: lts/*
 sudo: false
 branches:
   only:
-    - master
+  - master
 addons:
   chrome: stable
 script:
-  - npm run lint
-  - npm run test
-  - npm run build
+- npm run lint
+- npm run test
+- npm run build
 install:
-  - npm install
+- npm install
 deploy:
   provider: heroku
   api_key:
-    secure: kfqlUgEoNH43faQa1nYhJOLotOuuYBXT2BrsBMOeO7GO3F+fgU1zCarWR5V11Q2Vh82ivJaJIpRx3Ui5GtL2yPsOEw9eat3zkICcZt5Okd62iH3LmkOLZBGQUyTfr3hlHjQCMlzp3QfrILYJ/JmIQCydn4/XBteQMIOorGIDSBwf8UDzwstrBC0rqeOyFFJC8mtwf03eQakiHjxr7MVW1sIpo3L4/0I7xZ7eW3bpwWX7SbjogvjkwBRuB24B/RduyR0FgkJJlSTQ7PH6npMPVA3Lj4ilV5EoA1143JCxqsPf19lMdC/3i0MD+Q0i5SY60yUBgjnZRl80hRmvIjRIzbseLPPMD969jiQBVucl170DfTRKVDYWa0d9jwNEBEeo8yyQc92gkqQyaVdQxQfdH4ZAjWKzf/S17cVDjkcGJE38t45Zv5DeF17Efe88Ot7OwfEBsq2oNlpcQu0mhdAOtXYAmWw3BPaKxvl05RJ5QdPqtuWtGdwDGAzkkuFperr6xzbhTWAR70stFDOh370qN/kS7IcVuwRlzeRLDb9gd77yURgXPYFeSkZhzimHVc3n5oco9zUoOZ1RxJrTDYCmS+9Hd1UYC/iR56uNpjCdsRIv1BS57HqC1D/7Bxjp/T4jr2bw0gWtTF7Nuwh0sPqKGrwTCYCZoS9Gbv7DmzxUPtg=
+    secure: P17+L3w9J2a/ZvjxWkVZWvxPS445kwMMsn4M8gOwVoXo+Na+Zxn7URT/2NlT1A8Uh9xB3DvnBqFAVg9DXbwiFh7R7A5YbTe/bQA+uewpgSQxcwHc1KuwR0JtjSnK9qcLmqZ0FdYQdSXlwQ2hOGHZfGr3drtGlpb+il/BDMGx3WOauFok+tACeN7m7Rua6skEAKXuuixVpAuoHkF5m5kW3WnfF6n6XZ0IIrCvXfodXMXVUy8JR9U8ruraI6S07ctLvqWUxGAlj2IDlqDOujljDMGWJr8rZnqQKPPp7qrZo+mcm3hxlc/RZNT8TMH++vtypuRE1PUZBSZPA5lAu4nFtoiiBZDXvu6l8jl1BqFV9pQj1jSBvW6ZYeTbGd5dc2ujn38dTCRj3qmqKq8sZwxdyFhjR6j4ci2pCdzC2MUFwJO8uNn1jiukSGAOc9NDyMSAADRR3p/541dKEKilwvNa+y43EsoFqVGFRdxm5pjDcjsLErEjuVcTanzA3SNRxU0+1IqblTzf6ARkBW0lj1LUkmLEHavOM2STgDFH2fHh1gm+ScHuWGsrtT8LPmPxrzo/aXxY7q4VfbKxqXF8NdyEILdxMQiMKhkpOUb7S9ct57aQFlMYnfk9GfdikPxUGXSFelyG/0or5o9BeSiZM4ag4aR0pVgrxKnG0wv3ug8EMCI=
   app: ci-cd-hacker-example
   on:
     repo: imanishdhar/hacker-news-feed
 env:
   matrix:
-    secure: $GITHUB_TOKEN
+    secure: "$GITHUB_TOKEN"
 notifications:
   email:
-    - mandy.dwivedi@gmail.com
+  - mandy.dwivedi@gmail.com
 cache:
   yarn: true
   directories:
-    - node_modules
+  - node_modules
