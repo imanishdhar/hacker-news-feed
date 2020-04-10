@@ -1,4 +1,4 @@
-const getStartIndex = (page) => {
+const getStartIndex = (page = 1) => {
   const pageSize = 20;
   const pageStartIndex = pageSize * (page - 1) + 1;
   return pageStartIndex;

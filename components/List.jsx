@@ -11,7 +11,12 @@ import {
 
 import { getDomainName, getDifferenceInHrs } from '../utils/commonUtil';
 
-const List = ({ detail, index, upVoteClickHandler, hiddenClickHandler }) => (
+const List = ({
+  detail = {},
+  index,
+  upVoteClickHandler,
+  hiddenClickHandler,
+}) => (
   <li key={`${index}-${detail.created_at}`}>
     <section className="flex-container">
       <section className="right-section">

@@ -15,6 +15,10 @@
 # production
 /build
 
+# testing
+/coverage
+*.snap
+
 # misc
 .DS_Store
 
