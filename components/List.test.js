@@ -1,7 +1,6 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, render, mount } from 'enzyme';
 
-// Components
 import List from './List';
 
 function setup() {
@@ -16,8 +15,12 @@ function setup() {
     },
     index: 1,
     key: 'dhjshfghsf',
-    upVoteClickHandler: () => {},
-    hiddenClickHandler: () => {},
+    upVoteClickHandler: () => {
+      mockButtonClicked();
+    },
+    hiddenClickHandler: () => {
+      mockButtonClicked();
+    },
   };
   const wrapper = shallow(<List></List>);
   return { wrapper, props };
@@ -35,7 +38,60 @@ describe('List Test Suite', () => {
   });
 
   it('List component should render', () => {
-    const wrapper = setup();
+    const { wrapper } = setup();
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it('Upvote button clicked', () => {
+    const item = {
+      author: 'xyz',
+      title: 'Lorem ipsum',
+      points: '333',
+      num_comments: '777',
+      created_at: '2020-04-08T16:56:27.000Z',
+      url: 'https://www.google.com',
+    };
+    const props = {
+      index: 1,
+      key: 'dhjshfghsf',
+    };
+    const mockButtonClicked = jest.fn();
+    const wrapper = mount(
+      <List
+        detail={item}
+        key={props.key}
+        index={props.index}
+        upVoteClickHandler={mockButtonClicked}
+      ></List>
+    );
+    const button = wrapper.find('button').at(0);
+    button.simulate('click');
+    expect(mockButtonClicked).toHaveBeenCalled();
+  });
+  it('hidden button clicked', () => {
+    const item = {
+      author: 'xyz',
+      title: 'Lorem ipsum',
+      points: '333',
+      num_comments: '777',
+      created_at: '2020-04-08T16:56:27.000Z',
+      url: 'https://www.google.com',
+    };
+    const props = {
+      index: 1,
+      key: 'dhjshfghsf',
+    };
+    const mockButtonClicked = jest.fn();
+    const wrapper = mount(
+      <List
+        detail={item}
+        key={props.key}
+        index={props.index}
+        hiddenClickHandler={mockButtonClicked}
+      ></List>
+    );
+    const button = wrapper.find('button').at(1);
+    button.simulate('click');
+    expect(mockButtonClicked).toHaveBeenCalled();
   });
 });

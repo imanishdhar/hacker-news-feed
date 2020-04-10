@@ -24,7 +24,7 @@ class News extends Component {
     this.hiddenClickHandler = this.hiddenClickHandler.bind(this);
     this.upVoteClickHandler = this.upVoteClickHandler.bind(this);
   }
-  static async getInitialProps({ query: { pageid = 1 } }) {
+  static async getInitialProps({ query: { pageid = '1' } }) {
     if (
       typeof window !== 'undefined' &&
       isStorageAvaiable() &&
