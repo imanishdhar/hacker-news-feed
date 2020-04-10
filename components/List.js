@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faThumbsUp,
   faEyeSlash,
@@ -7,9 +7,9 @@ import {
   faUserNinja,
   faHourglassHalf,
   faBlog,
-} from "@fortawesome/free-solid-svg-icons";
+} from '@fortawesome/free-solid-svg-icons';
 
-import { getDomainName, getDifferenceInHrs } from "../utils/commonUtil";
+import { getDomainName, getDifferenceInHrs } from '../utils/commonUtil';
 
 const List = ({ detail, index, upVoteClickHandler, hiddenClickHandler }) => (
   <li key={`${index}-${detail.created_at}`}>
@@ -90,7 +90,7 @@ const List = ({ detail, index, upVoteClickHandler, hiddenClickHandler }) => (
       }
 
       li {
-        font-family: "Verdana";
+        font-family: 'Verdana';
         font-size: 13px;
         color: #828282;
         margin: 5px 0;

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 const Header = () => (
   <header className="fixed-header">
@@ -58,7 +58,7 @@ const Header = () => (
       }
 
       .header-option {
-        font-family: "Verdana";
+        font-family: 'Verdana';
         color: #000000;
         font-size: 14px;
         margin-right: 10px;
@@ -67,7 +67,7 @@ const Header = () => (
       }
 
       .header-title {
-        font-family: "Verdana";
+        font-family: 'Verdana';
         color: #000000;
         display: inline-block;
         padding: 0 10px;
