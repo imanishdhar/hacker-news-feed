@@ -55,18 +55,8 @@
     "prettier": "^2.0.4"
   },
   "jest": {
-    "collectCoverageFrom": [
-      "components/*.{js,jsx}",
-      "pages/**/*.{js,jsx}"
-    ],
     "coverageThreshold": {
-      "components/*.{js,jsx}": {
-        "branches": 80,
-        "functions": 80,
-        "lines": 80,
-        "statements": 80
-      },
-      "pages/**/*.{js,jsx}": {
+      "global": {
         "branches": 80,
         "functions": 80,
         "lines": 80,
