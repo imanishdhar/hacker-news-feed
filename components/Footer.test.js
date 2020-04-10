@@ -1,7 +1,5 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-
-// Components
 import Footer from './Footer';
 
 function setup() {
