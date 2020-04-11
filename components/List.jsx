@@ -61,27 +61,22 @@ const List = ({
               <span>{` Hide `}</span>
             </section>
             <section className="inline-block-control">
-              <button className="button-icon-container">
-                <FontAwesomeIcon
-                  size="1x"
-                  icon={faClock}
-                  title="hours"
-                ></FontAwesomeIcon>
-              </button>
-              <span>{`${getDifferenceInHrs(
-                detail.created_at
-              )} Hours Ago`}</span>
+              <section className="icon-container">
+                <FontAwesomeIcon size="1x" icon={faClock} />
+              </section>
+
+              <Link href="#">
+                <a>{`${getDifferenceInHrs(detail.created_at)} Hours Ago`}</a>
+              </Link>
             </section>
 
             <section className="inline-block-control">
-              <button className="button-icon-container">
-                <FontAwesomeIcon
-                  size="2x"
-                  icon={faComments}
-                  title="comments"
-                ></FontAwesomeIcon>
-              </button>
-              <span>{`${detail.num_comments} Comments`}</span>
+              <section className="icon-container">
+                <FontAwesomeIcon size="1x" icon={faComments} />
+              </section>
+              <Link href="#">
+                <a>{`${detail.num_comments} Comments`}</a>
+              </Link>
             </section>
           </section>
           <section>
@@ -121,7 +116,7 @@ const List = ({
 
         a {
           text-decoration: none;
-          color: blue;
+          color: #828282;
         }
 
         a:hover {
@@ -173,6 +168,7 @@ const List = ({
           height: 20px;
           margin: 0 4px;
           padding: 2px;
+          vertical-align: middle;
         }
 
         .button-icon-container {
