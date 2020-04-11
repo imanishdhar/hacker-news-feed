@@ -13,7 +13,9 @@ const HomePage = () => {
         />
         <meta key="fourth" name="description" content="Description" />
         <meta key="fifth" name="keywords" content="Keywords" />
+        <meta name="theme-color" content="#ffffff" />
         <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png"></link>
+        <link rel="manifest" href="/manifest.webmanifest"></link>
         <title>Hacker News Feed Example</title>
       </Head>
       <h1>Hacker News Feed Example</h1>
