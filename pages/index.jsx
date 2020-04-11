@@ -16,7 +16,7 @@ const HomePage = () => {
         <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png"></link>
         <title>Hacker News Feed Example</title>
       </Head>
-      <h1>Welcome to Hacker News Feed Example</h1>
+      <h1>Hacker News Feed Example</h1>
       <ul>
         <li>
           <Link href="/">
