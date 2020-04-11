@@ -32,13 +32,18 @@ const Footer = ({ page }) => (
       }
 
       .gap {
-        margin: 8px;
+        margin: 0 8px;
         font-size: 24px;
+        height: 24px;
+        width: 24px;
         color: #000000;
+        display: inline-block;
       }
 
       .fixed-footer {
         width: 100%;
+        height: 28px;
+        display: block;
         left: 0;
         position: fixed;
         background: #ff6600;
