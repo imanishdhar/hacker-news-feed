@@ -1,9 +1,10 @@
 {
+  "prefer_related_applications": true,
   "name": "hacker-news-example",
   "short_name": "hacker-news-example",
-  "theme_color": "#2196f3",
-  "background_color": "#2196f3",
-  "display": "browser",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone",
   "Scope": "/",
   "start_url": "/",
   "splash_pages": null,
