@@ -1,8 +1,21 @@
 import Link from 'next/link';
-// import Head from 'next/head';
+import Head from 'next/head';
 const HomePage = () => {
   return (
     <div>
+      <Head>
+        <meta key="first" charset="utf-8" />
+        <meta key="second" http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+          key="third"
+          name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=5"
+        />
+        <meta key="fourth" name="description" content="Description" />
+        <meta key="fifth" name="keywords" content="Keywords" />
+        <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png"></link>
+        <title>Hacker News Feed Example</title>
+      </Head>
       <h1>Welcome to Hacker News Feed Example</h1>
       <ul>
         <li>

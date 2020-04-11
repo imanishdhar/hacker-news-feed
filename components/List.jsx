@@ -5,8 +5,8 @@ import {
   faEyeSlash,
   faComments,
   faUserNinja,
-  faHourglassHalf,
   faBlog,
+  faClock,
 } from '@fortawesome/free-solid-svg-icons';
 
 import { getDomainName, getDifferenceInHrs } from '../utils/commonUtil';
@@ -34,10 +34,11 @@ const List = ({
           <section>
             <section className="inline-block-control">
               <button
-                className="icon-container"
+                className="button-icon-container"
                 onClick={() => upVoteClickHandler(index)}
               >
                 <FontAwesomeIcon
+                  size="2x"
                   icon={faThumbsUp}
                   title="Thumbs up"
                 ></FontAwesomeIcon>
@@ -46,7 +47,7 @@ const List = ({
             </section>
             <section className="inline-block-control">
               <button
-                className="icon-container"
+                className="button-icon-container"
                 onClick={() => hiddenClickHandler(index)}
               >
                 <FontAwesomeIcon icon={faEyeSlash} />
@@ -54,24 +55,26 @@ const List = ({
               <span>{` Hide `}</span>
             </section>
             <section className="inline-block-control">
-              <div className="icon-container">
+              <button className="button-icon-container">
                 <FontAwesomeIcon
-                  icon={faHourglassHalf}
+                  size="1x"
+                  icon={faClock}
                   title="hours"
                 ></FontAwesomeIcon>
-              </div>
+              </button>
               <span>{`${getDifferenceInHrs(
                 detail.created_at
               )} Hours Ago`}</span>
             </section>
 
             <section className="inline-block-control">
-              <div className="icon-container">
+              <button className="button-icon-container">
                 <FontAwesomeIcon
+                  size="2x"
                   icon={faComments}
                   title="comments"
                 ></FontAwesomeIcon>
-              </div>
+              </button>
               <span>{`${detail.num_comments} Comments`}</span>
             </section>
           </section>
@@ -79,12 +82,14 @@ const List = ({
             {detail.url && (
               <>
                 <Link href={detail.url}>
-                  <a>
+                  <a className="url-container">
                     <FontAwesomeIcon icon={faBlog} />
                   </a>
                 </Link>
                 <Link href={detail.url}>
-                  <a>{` (${getDomainName(detail.url)}) `}</a>
+                  <a className="url-container">{` (${getDomainName(
+                    detail.url
+                  )}) `}</a>
                 </Link>
               </>
             )}
@@ -94,6 +99,8 @@ const List = ({
 
       <style jsx>{`
         button {
+          width: 30px;
+          height: 25px;
           cursor: pointer;
         }
 
@@ -129,6 +136,8 @@ const List = ({
           background: #de7e2b;
           color: #ffffff;
           font-size: 25px;
+          width: 22px;
+          height: 25px;
           padding: 20px;
           border-radius: 50%;
         }
@@ -150,8 +159,23 @@ const List = ({
 
         .icon-container {
           display: inline-block;
-          font-size: 11px;
+          font-size: 15px;
+          width: 20px;
+          height: 20px;
           margin: 0 4px;
+          padding: 2px;
+        }
+
+        .button-icon-container {
+          display: inline-block;
+          margin: 0 4px;
+        }
+
+        .url-container {
+          width: 13px;
+          height: 13px;
+          font-size: 13px;
+          display: inline-block;
         }
 
         @media only screen and (min-width: 600px) {
@@ -161,9 +185,7 @@ const List = ({
           .right-section {
             display: inline-block;
           }
-          .icon-container {
-            font-size: 15px;
-          }
+
           .inline-block-control {
             display: inline-block;
           }
