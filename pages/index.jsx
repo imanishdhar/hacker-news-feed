@@ -1,15 +1,18 @@
 import Link from 'next/link';
+// import Head from 'next/head';
 const HomePage = () => {
   return (
     <div>
-      <p>Welcome to Next.js!</p>
+      <h1>Welcome to Hacker News Feed Example</h1>
       <ul>
         <li>
-          <Link href="/">Home</Link>
+          <Link href="/">
+            <a>Home</a>
+          </Link>
         </li>
         <li>
           <Link href="/news/[pageid]" as="/news/1">
-            News Page
+            <a>News Page</a>
           </Link>
         </li>
       </ul>
