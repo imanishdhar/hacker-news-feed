@@ -80,7 +80,12 @@ class News extends Component {
 
   upVoteClickHandler(index) {
     const { items, page } = this.state;
-    items[index].points += 1;
+    const item = items[index];
+    if (!item.isAlreadyUpVoted) {
+      item.points += 1;
+      item.isAlreadyUpVoted = true;
+    }
+
     setLocalStorageItem(page, items);
     this.setState({ items, page });
   }

@@ -24,7 +24,12 @@ const List = ({
           <div className="icon-container-lg">
             <FontAwesomeIcon icon={faUserNinja} title="author" />
           </div>
-          <section>{`@${detail.author}`}</section>
+
+          <section>
+            <Link href="#">
+              <a className="author">{`@${detail.author}`}</a>
+            </Link>
+          </section>
         </section>
 
         <section>
@@ -34,6 +39,7 @@ const List = ({
           <section>
             <section className="inline-block-control">
               <button
+                disabled={detail.isAlreadyUpVoted}
                 className="button-icon-container"
                 onClick={() => upVoteClickHandler(index)}
               >
@@ -126,6 +132,9 @@ const List = ({
           margin: 5px;
         }
 
+        .author {
+          color: #828282;
+        }
         .title {
           color: #000000;
           font-size: 14px;
