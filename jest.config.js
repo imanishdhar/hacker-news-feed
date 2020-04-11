@@ -12,6 +12,7 @@ module.exports = {
     '!coverage/**/*.{js,jsx,mjs}',
     '!*.config.js',
     '!utils/**/*.js',
+    '!public/**/*.js',
   ],
 
   // The directory where Jest should output its coverage files
